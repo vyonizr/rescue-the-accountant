@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="author" content="vyonizr">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Rescue the Accountant</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styleIndex.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>rescue the accountant</h1>
+      <div class="mission-description">
+        <p>&nbsp&nbsp&nbsp&nbsp You are Raiden Pearce, a highly skilled grey hat hacker. Your old partner Mason Bourne asks for your help to find someone named <strong>Christian Wolf</strong>.</p>
+        <p>&nbsp&nbsp&nbsp Wolf, an accountant who's also a former SIA (State Intelligence Agency) cryptanalyst, is currently being hunted by an unknown mercenary organization. Your job is to help Bourne by rescuing Wolf to a hideout without raising any suspicions. Latest intel said that Wolf working at a building called <strong>"42 Exchange"</strong>, a place where <strong>very high employee mobility</strong> happens. however he always stays on the same window side as the main entrance of the building.</p>
+        <p>&nbsp&nbsp&nbsp As usual, Bourne uses his sharp skills to infiltrate the building where Wolf is working at by disguising himself as one of the security guards. With your hacking capabilities, you're able to access all of the surveillance cameras and got their feeds below. Tell Bourne which floor and which window where Wolf is located. In order to decrease the possibility of decrypted transmissions, Wolf is assigned with codename <strong>"vertical bar"</strong>.</p>
+        <p>As agreed with Bourne, the <strong>ground floor starts from 1</strong> and <strong>window 1 starts from the left</strong>. Everyone you see now would be <strong>different</strong> if you <strong>restart your feed</strong>.</p>
+      </div>
+
+      <div class="surveillance-feed" align="center">
+        <table border="2" id="building"></table>
+      </div>
+
+      <div id = "location-input" align="center">
+        <div class="input">
+          <label for="target-floor">Floor&nbsp:</label>
+          <input type="text" id="target-floor" placeholder="#" required>
+        </div>
+
+        <div class="input">
+          <label for="target-window">Window:</label>
+          <input type="text" id="target-window" placeholder="#" required>
+        </div>
+
+        <div class="input">
+          <a href="#footer"><button type="submit" class="submitBtn" onclick="return submittedFormCheck(event)">Send location</button></a>
+        </div>
+      </div>
+
+      <div id="response" align="center">
+        <p id="jason-negative">&nbsp</p>
+        <p id="secured-wolf"></p>
+      </div>
+
+      <footer id="footer">
+        <p class="footer">&#169 2019 <a href="https://vyonizr.com/">vyonizr</a></p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="scripts/scriptGame.js"></script>
+  </body>
+</html>
