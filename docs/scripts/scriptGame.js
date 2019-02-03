@@ -10,7 +10,7 @@ window.addEventListener("keydown",function (e) {
 
 var display = "";
 var map = 6;
-var people = ["1", "l", "¦"];
+var people = ["1", "l", "¦", "!", "i", "I"];
 var targetSymbol = "<span id=\"itswolf\"></span>";
 var targetRow = Math.floor(Math.random() * map);
 var targetColumn = Math.floor(Math.random() * map);
@@ -33,7 +33,7 @@ for (var i = 0; i < map; i++) {
     else {
       var windows = "";
 
-      for (var k = 0; k < 5; k++) {
+      for (var k = 0; k < map; k++) {
         if (i === targetRow && j === targetColumn && k === targetLocation) {
           windows += targetSymbol;
         }
@@ -117,7 +117,7 @@ function submittedFormCheck(event) {
       var interval = setInterval(function() {
         document.getElementById("countdown-restart").innerHTML = "Game restarts in: " + --secondsLeft;
 
-        if (secondsLeft < 0) {
+        if (secondsLeft <= 0) {
           clearInterval(interval);
           window.location.reload(true);
         }
